@@ -59,7 +59,7 @@ func (client *Client) GraphQL(ctx context.Context, query string, variables map[s
 	return client.Client.GraphQL(ctx, query, variables)
 }
 
-var DefaultEndpoint = "https://eu1.prisma.sh/nikolas/uytreg/uyjthrgfe"
+var DefaultEndpoint = "https://us1.prisma.sh/camilo-guerrero-1a9719/gqlgen-prisma/dev"
 var Secret = ""
 
 func (client *Client) Post(params PostWhereUniqueInput) *PostExec {
@@ -933,7 +933,8 @@ func (instance UserSubscriptionPayloadExecArray) Exec(ctx context.Context) ([]Us
 }
 
 type UserSubscriptionPayload struct {
-	UpdatedFields []string `json:"updatedFields,omitempty"`
+	Mutation      MutationType `json:"mutation"`
+	UpdatedFields []string     `json:"updatedFields,omitempty"`
 }
 
 type PostSubscriptionPayloadExec struct {
@@ -989,7 +990,8 @@ func (instance PostSubscriptionPayloadExecArray) Exec(ctx context.Context) ([]Po
 }
 
 type PostSubscriptionPayload struct {
-	UpdatedFields []string `json:"updatedFields,omitempty"`
+	Mutation      MutationType `json:"mutation"`
+	UpdatedFields []string     `json:"updatedFields,omitempty"`
 }
 
 type PostConnectionExec struct {
