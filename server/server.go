@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/99designs/gqlgen/handler"
-	"github.com/prisma/prisma-examples/go/graphql/prisma-client"
+	"github.com/datdevboi/gqlgen-prisma/prisma-client"
 )
 
 const defaultPort = "4000"
